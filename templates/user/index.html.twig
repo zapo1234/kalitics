@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+
+{% block body %}
+    <style>
+        h1{font-family: arial;font-size:18px;text-align: center;margin-top:50px;}
+        .table{width:80%;margin-left:15%;} button{background: blue;color:white;font-family: arial;margin-top:5px;margin-left:15%;} a{padding:1%;background:blue;color:white;text-decoration: none;width:100px;border:2px solid blue }
+        .bec {padding:1%;background:red;color:white;text-decoration: none;width: 100px; border:2px solid red; border-radius:10px;font-family: arial;}
+    </style>
+
+
+    <h1>Utilisateur du logiciel test  Kalitics</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Firstname</th>
+                <th>Matricule</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.matricule }}</td>
+                <td>
+                    <a href="{{ path('user_show', {'id': user.id}) }}">voir</a>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}">mofier</a>
+                    <a class="bec" href="{{ path('user_delete', {'id': user.id}) }}">suprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <button><a href="{{ path('user_new') }}">Créer un user</a></button>
+{% endblock %}

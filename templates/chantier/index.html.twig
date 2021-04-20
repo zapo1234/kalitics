@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chantier index{% endblock %}
+
+
+
+{% block body %}
+
+    <style>
+        h1{font-family: arial;font-size:18px;text-align: center;margin-top:50px;}
+        .table{width:80%;margin-left:15%;} button{background: blue;color:white;font-family: arial;margin-top:5px;margin-left:15%;} a{padding:1%;background:blue;color:white;text-decoration: none;width:100px;border:2px solid blue }
+        .bec {padding:1%;background:red;color:white;text-decoration: none;width: 100px; border:2px solid red; border-radius:10px;font-family: arial;}
+    </style>
+
+    <h1>Lister vos chantiers</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Startdate</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for chantier in chantiers %}
+            <tr>
+                <td>{{ chantier.id }}</td>
+                <td>{{ chantier.nom }}</td>
+                <td>{{ chantier.adresse }}</td>
+                <td>{{ chantier.startdate| date('d/m/y') }}</td>
+                <td>
+                    <a href="{{ path('chantier_show', {'id': chantier.id}) }}">voir</a>
+                    <a href="{{ path('chantier_edit', {'id': chantier.id}) }}">edit</a>
+                    <a class="bec" href="{{ path('chantier_delete', {'id': chantier.id}) }}">suprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <button><a href="{{ path('chantier_new') }}">ajouter un chantier</a></button>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chantier{% endblock %}
+
+{% block body %}
+    <style>
+        h1{font-family: arial;font-size:18px;text-align: center;margin-top:50px;}
+        .table{width:80%;margin-left:15%;} button{background: blue;color:white;font-family: arial;margin-top:5px;margin-left:15%;} a{padding:1%;background:blue;color:white;text-decoration: none;width:100px;border:2px solid blue }
+        .bec {padding:1%;background:red;color:white;text-decoration: none;width: 100px; border:2px solid red; border-radius:10px;font-family: arial;}
+    </style>
+
+
+    <h1>Vu sur un chantier </h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ chantier.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ chantier.nom }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ chantier.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Startdate</th>
+                <td>{{ chantier.startdate ? chantier.startdate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Liste des users ayant pointé sur ce chantier </h1>
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Firstname</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for users in listes %}
+            <td>{{ users.name }}</td>
+            <td>{{ users.firstname }}</td>
+
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <a href="{{ path('chantier_index') }}">back to list</a>
+
+    <a href="{{ path('chantier_edit', {'id': chantier.id}) }}">edit</a>
+
+    {{ include('chantier/_delete_form.html.twig') }}
+{% endblock %}

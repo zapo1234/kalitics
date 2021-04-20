@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+
+    <style>
+        h1{font-family: arial;font-size:18px;text-align: center;margin-top:50px;}
+        form{width:80%;margin-left:15%;} .btn{background: blue;color:white;font-family: arial;margin-top:5px;margin-left:15%;} a{color:white;text-decoration: none;}
+    </style>
+
+    <h1>Creér un utilisateur </h1>
+
+    {{ include('user/_form.html.twig') }}
+
+    <a href="{{ path('user_index') }}">back to list</a>
+{% endblock %}

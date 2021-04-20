@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Chantier{% endblock %}
+
+{% block body %}
+    <style>
+        h1{font-family: arial;font-size:18px;text-align: center;margin-top:50px;}
+        form{width:50%;margin-left:15%;} .btn{background: blue;color:white;font-family: arial;margin-top:5px;margin-left:15%;} .bt{color:black;text-decoration: none;}
+    </style>
+
+
+    <h1>Ajouter un chantier</h1>
+
+    {{ include('chantier/_form.html.twig') }}
+
+    <a class="bt" href="{{ path('chantier_index') }}">Retour à la liste des chantier</a>
+{% endblock %}

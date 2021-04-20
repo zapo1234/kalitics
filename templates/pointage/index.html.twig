@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pointage des users {% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin-left:10%; max-width: 1200px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    form{width: 50%;} .div1,.div2{float:left;width: 500px;}
+</style>
+
+<div class="example-wrapper">
+    <div class="div1">
+    <h1> Pointage des users </h1>
+
+    {{ form_start(form) }}
+
+    {{ form_widget(form) }}
+
+    <button type="submit" class="btn btn-success">Pointer</button>
+    {{ form_end(form)  }}
+
+    <div class="error">
+        {% for message in app.flashes('alerte') %}
+         <div class="class">{{ message }}</div>
+        {% endfor %}
+
+    </div>
+
+        <div class="error">
+            {% for message in app.flashes('alertes') %}
+                <div class="class">{{ message }}</div>
+            {% endfor %}
+
+        </div>
+
+        <div class="error">
+            {% for message in app.flashes('danger') %}
+                <div class="class">{{ message }}</div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <div class="div2">
+
+        <h2>Liste des pointages existants</h2>
+
+        <table class="table">
+        <thead>
+        <tr>
+            <th>Matricule user</th>
+            <th>chantier</th>
+            <th>User sur chantier</th>
+            <th>Durée sur chantier(en minute)</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in liste %}
+            <tr>
+                <td>{{ user.user }}</td>
+                <td>{{ user.chantier }}</td>
+                <td></td>
+                <td>{{  user.time1  }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

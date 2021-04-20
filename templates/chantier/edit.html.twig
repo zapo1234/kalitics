@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Chantier{% endblock %}
+
+{% block body %}
+    <style>
+        h1{font-family: arial;font-size:18px;text-align: center;margin-top:50px;}
+        .table{width:80%;margin-left:15%;} button{background: blue;color:white;font-family: arial;margin-top:5px;margin-left:15%;} .btn{padding:1%;background:blue;color:white;text-decoration: none;width:100px;border:2px solid blue }
+        .bec {padding:1%;background:red;color:white;text-decoration: none;width: 100px; border:2px solid red; border-radius:10px;font-family: arial;}
+        form{width:50%;margin-left:20% }
+    </style>
+
+    <h1>Edit Chantier</h1>
+
+    {{ include('chantier/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('chantier_index') }}">back to list</a>
+
+    {{ include('chantier/_delete_form.html.twig') }}
+{% endblock %}
