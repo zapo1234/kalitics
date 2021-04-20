@@ -1,7 +1,9 @@
 # kalitics
-Test solution NB : la version utilisés sur mon oridnateur était sur du PHP8 vu les annotation des routes 
+Test solution
 -test fonctionnel en local à mon niveau
-Développement de la solution test sur un environement symfony 4 /5.2  , environement PHP version PHP 8.0.2 , serveur wampserver localhost
+Développement de la solution test sur un environement 
+ -Symfony 4 ou 5.2(test réalisé sur 5.2)  , 
+ - environement PHP version PHP 8.0.2 , serveur wampserver localhost
 -Utilisation des commande php/bin console 
 
 A) installer le projet symfony avec composer  composer create-project symfony/skeleton , le clone avec git clone
@@ -40,7 +42,7 @@ edit User =>http://127.0.0.1:8000/user/{id}/edit
  -PointageController /pointage type
 - développement du formulaire depointage et affichage de la liste des pointage existant
 - Vue  templates twig dossier templates/Pointage
-- afficher dans la vue sur l'url suivant http://127.0.0.1:8000/pointage (formulaire + liste).
+- Afficher dans la vue sur l'url suivant http://127.0.0.1:8000/pointage (formulaire + liste).
 - développement d'une fonction SommeTime dans le PointageRepository qui appelle la fonction qui calcule la somme des durées d'un user
 - 
 
