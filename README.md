@@ -1,7 +1,7 @@
 # kalitics
 Test solution NB : la version utilisés sur mon oridnateur était sur du PHP8 vu les annotation des routes 
 -test fonctionnel en local à mon niveau
-Développement de la solution test sur un environement symfony 4 /5.2  , environement PHP 8
+Développement de la solution test sur un environement symfony 4 /5.2  , environement PHP version PHP 8.0.2
 -Utilisation des commande php/bin console 
 
 A) installer le projet symfony avec composer  composer create-project symfony/skeleton , le clone avec git clone
@@ -16,16 +16,16 @@ A) installer le projet symfony avec composer  composer create-project symfony/sk
  Relation  ManyToOne sur User => Chantier 
 
 -2) développemnts de 3 controller et 3 forms dans le dossiers src/controller dans le dossier src/Form
-- UserController
+- UserController/userType
 - templates twig dossier templates/user
 - afficher dans la vue sur l'url suivant http://127.0.0.1:8000/user/
-fonctionnalités CRUD
+  fonctionnalités CRUD
  différentes routes
-lister findAll=>http://127.0.0.1:8000/user/ voir des boutons pour le crud(create,edith, delete)
-create User =>http://127.0.0.1:8000/user/new
-edit User =>http://127.0.0.1:8000/user/{id}/edit
+ lister findAll=>http://127.0.0.1:8000/user/ voir des boutons pour le crud(create,edith, delete)
+ create User =>http://127.0.0.1:8000/user/new
+ edit User =>http://127.0.0.1:8000/user/{id}/edit
 
--ChantierController
+-ChantierController/chantierType
 
 -  Vue templates twig dossier templates/chantier
 - afficher dans la vue sur l'url suivant http://127.0.0.1:8000/chantier/
@@ -37,10 +37,12 @@ create chantier =>http://127.0.0.1:8000/chantier/new
 view Chantier  =>http://127.0.0.1:8000/chantier/1 => voir tous les utilisateurs qui ont pointé sur ce chantier
 edit User =>http://127.0.0.1:8000/user/{id}/edit 
 
--PointageController
-
+-PointageController /pointage type
+- développement du formulaire depointage et affichage de la liste des pointage existant
 - Vue  templates twig dossier templates/Pointage
-- afficher dans la vue sur l'url suivant http://127.0.0.1:8000/chantier/
+- afficher dans la vue sur l'url suivant http://127.0.0.1:8000/pointage
+- développement d'une fonction SommeTime dans le PointageRepository qui appelle la fonction qui calcule la somme des durées d'un user
+- 
 
 
 
