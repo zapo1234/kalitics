@@ -4,8 +4,8 @@ Test solution NB : la version utilisés sur mon oridnateur était sur du PHP8 vu
 Développement de la solution test sur un environement symfony 4 /5.2  , environement PHP 8
 
 A) installer le projet symfony avec composer composer create-project symfony/skeleton , le clone avec git clone
-2) Mise en place de la base de données dans le fichier .env  creation de la base de données avec php/bin/console doctrine:database:created
-3) génération des migrations dans le migrations des 3 tables Mysql =>php bin/console migration:migrate.
+1) Mise en place de la base de données dans le fichier .env  creation de la base de données avec php/bin/console doctrine:database:created
+2) génération des migrations dans les migrations des 3 tables Mysql =>php bin/console migration:migrate.
 
 -B) Création des differentes entités dans le dossier src/Entity
 
