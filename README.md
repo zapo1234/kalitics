@@ -4,7 +4,8 @@
 - Développement de la solution test sur un environement 
  -  Symfony 4 ou 5.2(test réalisé sur 5.2)  , 
  - environement PHP version PHP 8.0.2 , serveur wampserver localhost
- - installer votre fichier .env pour votre base de données.
+ - installer votre fichier .env pour votre base de données
+ - DATABASE_URL=mysql://root:@127.0.0.1:3306/Kalitics en locale dans le .env
  
  - cloner le projet avec git clone https://github.com/zapo1234/kalitics ensuite
  -  faire un composer install pour les dépences du composer.json et installer vendor.
