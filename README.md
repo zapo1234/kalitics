@@ -7,8 +7,8 @@
 -  Utilisation des commande php/bin console 
 
 A) installer le projet symfony avec composer  composer create-project symfony/skeleton , le clone avec git clone
-1) Mise en place de la base de données dans le fichier .env  creation de la base de données avec =>
--php/bin/console doctrine:database:created
+1) Mise en place de la base de données dans le fichier .env  creation de la base de données avec
+  -php/bin/console doctrine:database:created
 2) génération des migrations dans les migrations des 3 tables Mysql => 
 - php bin/console migrations:migrate.
 - php bin/console doctrine:migrations:migrate
