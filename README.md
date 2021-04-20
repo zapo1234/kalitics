@@ -10,7 +10,8 @@ A) installer le projet symfony avec composer  composer create-project symfony/sk
 1) Mise en place de la base de données dans le fichier .env  creation de la base de données avec =>
 -php/bin/console doctrine:database:created
 2) génération des migrations dans les migrations des 3 tables Mysql => 
-- php bin/console migration:migrate.
+- php bin/console migrations:migrate.
+- php bin/console doctrine:migrations:migrate
 3) Démarrage du server avec => symfony serve = 
  -  taper  http://127.0.0.1:8000/user
 
