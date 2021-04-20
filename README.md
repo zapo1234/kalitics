@@ -1,7 +1,7 @@
 # kalitics
 Test solution
 -test fonctionnel en local à mon niveau
-Développement de la solution test sur un environement 
+- Développement de la solution test sur un environement 
  -Symfony 4 ou 5.2(test réalisé sur 5.2)  , 
  - environement PHP version PHP 8.0.2 , serveur wampserver localhost
 -Utilisation des commande php/bin console 
