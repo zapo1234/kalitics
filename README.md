@@ -1,15 +1,18 @@
 # kalitics
-Test solution
--test fonctionnel en local à mon niveau
+  Test solution
+- test fonctionnel en local 
 - Développement de la solution test sur un environement 
- -Symfony 4 ou 5.2(test réalisé sur 5.2)  , 
+ -  Symfony 4 ou 5.2(test réalisé sur 5.2)  , 
  - environement PHP version PHP 8.0.2 , serveur wampserver localhost
--Utilisation des commande php/bin console 
+-  Utilisation des commande php/bin console 
 
 A) installer le projet symfony avec composer  composer create-project symfony/skeleton , le clone avec git clone
-1) Mise en place de la base de données dans le fichier .env  creation de la base de données avec =>php/bin/console doctrine:database:created
-2) génération des migrations dans les migrations des 3 tables Mysql => php bin/console migration:migrate.
-3) Démarrage du server avec => symfony serve =  taper  http://127.0.0.1:8000/user
+1) Mise en place de la base de données dans le fichier .env  creation de la base de données avec =>
+-php/bin/console doctrine:database:created
+2) génération des migrations dans les migrations des 3 tables Mysql => 
+- php bin/console migration:migrate.
+3) Démarrage du server avec => symfony serve = 
+ -  taper  http://127.0.0.1:8000/user
 
 -B) Création des differentes entités dans le dossier src/Entity
 
